@@ -24,7 +24,6 @@
     // onSuccess Geolocation
     //
     function onSuccess(position) {
-		navigator.notification.vibrate(500);
         var element = document.getElementById('geolocation');
 		var date = new Date(position.timestamp);
         element.innerHTML = 'Latitude: '           + position.coords.latitude         + '<br />' +
@@ -36,6 +35,7 @@
                             'Speed: '              + position.coords.speed            + '<br />' +
                             'Timestamp: '          + position.timestamp               + '<br />' +
 							'Date/Time: '          + date.toLocaleString()            + '<br /><hr />';
+		navigator.notification.vibrate(500);
     }
 	
 	// onError Callback receives a PositionError object
