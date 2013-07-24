@@ -24,6 +24,7 @@
     // onSuccess Geolocation
     //
     function onSuccess(position) {
+		navigator.notification.vibrate(500);
         var element = document.getElementById('geolocation');
 		var date = new Date(position.timestamp);
         element.innerHTML = 'Latitude: '           + position.coords.latitude         + '<br />' +
